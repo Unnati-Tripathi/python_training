@@ -15,14 +15,28 @@ print("="*50)
 
 nums = [10, 20, 30, 40, 50]
 
+# arr = [12 , 34 , 50]
+
+
+# print(len(arr));
+# print(max(arr));
+import math
 print("len:", len(nums))
 print("max:", max(nums))
 print("min:", min(nums))
 print("sum:", sum(nums))
-print("sorted:", sorted([5,2,8,1]))
+print("sorted:", sorted([5,2,8,1]) )
+print("ceil" , math.ceil(3.2));
+print("floor" , math.floor(3.2))
+
 print("abs:", abs(-15))
 print("round:", round(3.14159, 2))
 
+# 3%5 = 3
+# lambda  functions , sorting based upon the basis of remainder
+
+
+# Returns index and value together.
 print("\nEnumerate Example")
 names = ["Amit", "Sara", "Unnati"]
 
@@ -169,6 +183,9 @@ finally:
     print("Cleanup Code Executed")
 
 
+
+
+
 # with else 
 try:
     print(10 / 2)
@@ -181,3 +198,31 @@ else:
 
 finally:
     print("Done")
+
+
+
+
+
+
+
+# FLOW:-
+
+# try
+#  │
+#  ├── Exception?
+#  │      │
+#  │      ├── Yes → except
+#  │      │
+#  │      └── No  → else
+#  │
+#  └─────────────→ finally
+
+
+# Common Exceptions
+# Exception	Example
+# ZeroDivisionError	10/0
+# ValueError	int("abc")
+# IndexError	lst[10]
+# KeyError	d["name"] missing
+# TypeError	"1" + 2
+# FileNotFoundError	Open missing file
