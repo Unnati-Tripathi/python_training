@@ -67,6 +67,16 @@ dates = re.findall(
 )
 print(dates)
 
+
+
+# \d{2}-\d{2}-\d{4}                    ==digits only of range{2}
+# |
+# \d{2}/\d{2}/\d{4}
+# |                                    ==OR
+# \d{4}-\d{2}-\d{2}
+
+
+
 # 4. Find Duplicate Words
 # Detect consecutive duplicate words.
 # Example:
@@ -74,9 +84,23 @@ print(dates)
 # Output:
 # ['is', 'sample']
 
-text = "This is is a sample sample text."
+text = "This is bis a sample sample is text."
+# duplicates = re.findall(r'(\w+)\s+\1', text) 
+# # ['is', 'sample']
 duplicates = re.findall(r'\b(\w+)\s+\1\b', text)
 print(duplicates)
+
+
+
+# \s+ means: one or more whitespace characters
+# (space)
+# (tab)
+# (newline)
+
+# (\w+)  -> captures "is"
+# \s+    -> matches space
+# \1     -> matches "is" again
+# \b     ->word boundary
 
 
 
@@ -116,6 +140,8 @@ for match in re.findall(pattern, logs):
     })
 print(result)
 
+# . => Any character except newline.
+
 
 
 # 7. Extract HTML Tags
@@ -135,6 +161,9 @@ html = """<div>Hello</div>
 tags = re.findall(r'<([a-zA-Z][a-zA-Z0-9]*)\b', html)
 
 print(tags)
+
+# * -> 0 or more times ye sequesnce check krlo aage
+
 
 
 # 8 Extract Currency Values

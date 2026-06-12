@@ -1,0 +1,3 @@
+INFO User logged in
+ERROR Database failed
+INFO User logged out
