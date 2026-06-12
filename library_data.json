@@ -1,0 +1,18 @@
+{
+    "books": {
+        "1": {
+            "id": "1",
+            "title": "harry potter",
+            "author": "harry",
+            "collection": "harry potter"
+        },
+        "2": {
+            "id": "2",
+            "title": "friends",
+            "author": "friends",
+            "collection": null
+        }
+    },
+    "users": {},
+    "transactions": []
+}
